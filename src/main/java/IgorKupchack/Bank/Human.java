@@ -10,9 +10,17 @@ public class Human {
     private int year;
 
     public Human() {
-        name = "";
-        surname = "";
-        date = mounth = year = 0;
+        name = "-1";
+        surname = "-1";
+        date = mounth = year = -1;
+    }
+
+    public Human(String name, String surname, int date, int mounth, int year) {
+        this.name = name;
+        this.surname = surname;
+        this.date = date;
+        this.mounth = mounth;
+        this.year = year;
     }
 
     public void setName() {
@@ -22,6 +30,11 @@ public class Human {
         a = b.next();
         name = a;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
 
     public void setSurName() {
         String c;
@@ -53,6 +66,10 @@ public class Human {
         Scanner b = new Scanner(System.in);
         d = b.nextInt();
         year = d;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void show() {
