@@ -19,7 +19,19 @@ public class ClientTest {
         Client cl = new Client();
         String testPhone1 = "0971073443";
         String testPhone2 = "380971073443";
-        assertEquals("Incorect phone number format", cl.setPhone(testPhone1));
-        assertEquals("Phone number is setup", cl.setPhone(testPhone2));
+        assertEquals("Incorect phone number format", cl.setPhoneNumber(testPhone1));
+        assertEquals("Phone number is setup", cl.setPhoneNumber(testPhone2));
+    }
+
+    @Test // TODO Task 4002
+    public void getMobileOperatorTest() throws Exception{
+        Client cl = new Client();
+        String testPhone1 = "0971073443";
+        String testPhone2 = "0501073443";
+        cl.setPhoneNumber(testPhone1);
+        assertEquals("Kyivstar", cl.getMobileOperator());
+        cl.setPhoneNumber(testPhone2);
+        assertEquals("Vodafone", cl.getMobileOperator());
+
     }
 }
