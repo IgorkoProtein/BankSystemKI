@@ -24,7 +24,7 @@ public class ClientTest {
     }
 
     @Test // TODO Task 4002
-    public void getMobileOperatorTest() throws Exception{
+    public void getMobileOperatorTest() throws Exception {
         Client cl = new Client();
         String testPhone1 = "0971073443";
         String testPhone2 = "0501073443";
@@ -33,5 +33,18 @@ public class ClientTest {
         cl.setPhoneNumber(testPhone2);
         assertEquals("Vodafone", cl.getMobileOperator());
 
+    }
+
+    @Test // TODO Task 4003
+    public void checkAgeTest() throws Exception {
+        Client cl1 = new Client("Nazar", "Mykhailiv",
+                30, 07, 1990,
+                "0971073443");
+        Client cl2 = new Client("Igor", "Kupchack",
+                1, 01, 2001,
+                "0501073443");
+
+        assertEquals("It's possible to open account for this client", cl1.checkAge());
+        assertEquals("It's not possible to open account for this client", cl2.checkAge());
     }
 }
