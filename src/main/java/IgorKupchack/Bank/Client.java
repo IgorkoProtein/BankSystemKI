@@ -1,4 +1,5 @@
 package IgorKupchack.Bank;
+import java.io.*;
 
 
 public class Client extends Human {
@@ -18,9 +19,17 @@ public class Client extends Human {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
+    public String setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+        String a = "Phone number is setup";
+        String b = "Incorect phone number format";
+        int size = phoneNumber.length();
+        if (size == 10){
+            return a;
+        }
+        else {
+            return b;
+        }
     }
-
 
 }
