@@ -1,4 +1,5 @@
 package IgorKupchack.Bank;
+
 import java.io.*;
 
 
@@ -24,12 +25,27 @@ public class Client extends Human {
         String a = "Phone number is setup";
         String b = "Incorect phone number format";
         int size = phoneNumber.length();
-        if (size == 10){
+        if (size == 10) {
             return a;
-        }
-        else {
+        } else {
             return b;
         }
     }
 
+    public String getMobileOperator() {
+        int Vod = 5;
+        int Kiy = 9;
+        String a = "Kyivstar";
+        String b = "Vodafone";
+        char aChar = this.phoneNumber.charAt(1);
+        if (aChar == Vod) {
+            return b;
+        } else if (aChar == Kiy) {
+            return a;
+        } else {
+            System.out.printf("error");
+        }
+    }
 }
+
+
