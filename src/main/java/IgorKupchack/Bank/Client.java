@@ -22,28 +22,34 @@ public class Client extends Human {
 
     public String setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
-        String a = "Phone number is setup";
-        String b = "Incorect phone number format";
+        String setupMessage = "Phone number is setup";
+        String wrongMessage = "Incorect phone number format";
         int size = phoneNumber.length();
         if (size == 10) {
-            return a;
+            return wrongMessage;
         } else {
-            return b;
+            return setupMessage;
         }
     }
 
     public String getMobileOperator() {
-        int Vod = 5;
-        int Kiy = 9;
-        String a = "Kyivstar";
-        String b = "Vodafone";
-        char aChar = this.phoneNumber.charAt(1);
-        if (aChar == Vod) {
-            return b;
-        } else if (aChar == Kiy) {
-            return a;
+        String[] operators = new String[]{"Kyivstar", "Vodafone"};
+        String[] operCode = new String[]{"097", "050"};
+        StringBuilder tempStr = new StringBuilder(this.phoneNumber);
+        String code;
+        int i;
+
+        code = tempStr.substring(0, 3);
+
+        for (i = 0; i < operCode.length; i++) {
+            if (code.compareTo(operCode[i]) == 0) {
+                break;
+            }
+        }
+        if (i == operators.length) {
+            return "none";
         } else {
-            System.out.printf("error");
+            return operators[i];
         }
     }
 }
