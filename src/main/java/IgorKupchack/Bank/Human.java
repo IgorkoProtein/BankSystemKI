@@ -15,6 +15,14 @@ public class Human {
         date = mounth = year = -1;
     }
 
+    /**
+     *
+     * @param name - імя
+     * @param surname - прізвище
+     * @param date
+     * @param mounth
+     * @param year
+     */
     public Human(String name, String surname, int date, int mounth, int year) {
         this.name = name;
         this.surname = surname;
@@ -23,6 +31,9 @@ public class Human {
         this.year = year;
     }
 
+    /**
+     *
+     */
     public void setName() {
         String a;
         System.out.println("Enter his name");
@@ -31,6 +42,10 @@ public class Human {
         name = a;
     }
 
+    /**
+     *
+     * @param name - даний параметр може бути переданий в метод як String
+     */
     public void setName(String name) {
         this.name = name;
     }

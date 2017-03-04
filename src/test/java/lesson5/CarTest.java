@@ -1,8 +1,6 @@
-package IgorKupchack.Bank.lesson5;
+package lesson5;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class CarTest {
     @Test

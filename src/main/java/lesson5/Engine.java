@@ -1,4 +1,4 @@
-package IgorKupchack.Bank.lesson5;
+package lesson5;
 
 public class Engine {
     private double volume;

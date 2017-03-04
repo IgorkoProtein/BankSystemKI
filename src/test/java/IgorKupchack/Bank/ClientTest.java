@@ -40,6 +40,11 @@ public class ClientTest {
         Account ac = new Account("4444555566667777", 5000, 5555);
         igor.setAccount(ac);
 
+        Object obj = new Object();
+
+        System.out.println(ac.toString());
+
+
     }
 
     @Test // TODO Task 4003

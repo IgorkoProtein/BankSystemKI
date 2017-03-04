@@ -41,5 +41,14 @@ public class Account {
     public void setPassword(int password) {
         this.password = password;
     }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "accountNumber='" + accountNumber + '\'' +
+                ", balance=" + balance +
+                ", password=" + password +
+                '}';
+    }
 }
 
