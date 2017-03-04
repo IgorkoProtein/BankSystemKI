@@ -1,49 +1,45 @@
 package IgorKupchack.Bank;
 
 
-
 public class Account {
-
-
-    private int accountNumber;
-    private double balence;
+    private String accountNumber;
+    private double balance;
     private int password;
 
     public Account() {
-        this.accountNumber = 1;
-        this.balence = 0.1;
-        this.password = 1;
+        this.accountNumber = "none";
+        this.balance = -1;
+        this.password = -1;
     }
 
-    public Account(int accountNumber, double balence, int password) {
+    public Account(String accountNumber, double balance, int password) {
         this.accountNumber = accountNumber;
-        this.balence = balence;
+        this.balance = balance;
         this.password = password;
     }
 
-    public void setAccountNumber(int accountNumber) {
-        this.accountNumber = accountNumber;
-    }
-
-    public void setBalence(double balence) {
-        this.balence = balence;
-    }
-
-    public void setPassword(int password) {
-        this.password = password;
-    }
-
-    public int getAccountNumber() {
+    public String getAccountNumber() {
         return accountNumber;
     }
 
-    public double getBalence() {
-        return balence;
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 
     public int getPassword() {
         return password;
     }
 
+    public void setPassword(int password) {
+        this.password = password;
+    }
 }
 

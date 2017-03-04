@@ -35,15 +35,11 @@ public class ClientTest {
     }
 
     @Test
-    public void accountTest(){
+    public void accountTest() {
         Client igor = new Client();
-        igor.setAccountNumber(1997);
-        igor.setPassword(777);
-        igor.setBalence(0.1);
+        Account ac = new Account("4444555566667777", 5000, 5555);
+        igor.setAccount(ac);
 
-        igor.getAccountNumber();
-        igor.getPassword();
-        igor.getBalence();
     }
 
     @Test // TODO Task 4003

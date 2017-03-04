@@ -3,6 +3,7 @@ package IgorKupchack.Bank.lesson5;
 public class Car {
     private String name;
     private CarControll controll = new CarControll();
+    private Engine engine;
 
     public Engine getEngine() {
         return engine;
@@ -12,7 +13,7 @@ public class Car {
         this.engine = engine;
     }
 
-    private Engine engine;
+
 
     public Car(String name) {
         this.name = name;

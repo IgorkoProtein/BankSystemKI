@@ -1,20 +1,20 @@
 package IgorKupchack.Bank;
 
-import java.io.*;
-
 
 public class Client extends Human {
     private String phoneNumber;
-    private Account account = new Account();
+    private Account account;
 
     public Client() {
         super();
         phoneNumber = "-1";
+        account = new Account();
     }
 
     public Client(String name, String surname, int date, int mounth, int year, String phoneNumber) {
         super(name, surname, date, mounth, year);
         this.phoneNumber = phoneNumber;
+        account = new Account();
     }
 
     public String getPhoneNumber() {
@@ -54,29 +54,12 @@ public class Client extends Human {
         }
     }
 
-    public void setAccountNumber(int accountNumber) {
-        account.setAccountNumber(accountNumber);
+    public Account getAccount() {
+        return account;
     }
 
-    public void setBalence(double balence) {
-        account.setBalence(balence);
-    }
-
-    public void setPassword(int password) {
-        account.setPassword(password);
-    }
-
-    public void getAccountNumber(){
-
-        System.out.printf("Nuber of account "+account.getAccountNumber());
-    }
-
-    public void getBalence(){
-        System.out.printf("Balence "+account.getBalence());
-    }
-
-    public void getPassword(){
-        System.out.printf("Password "+account.getPassword());
+    public void setAccount(Account account) {
+        this.account = account;
     }
 }
 
