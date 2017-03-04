@@ -34,6 +34,18 @@ public class ClientTest {
         assertEquals("Vodafone", cl.getMobileOperator());
     }
 
+    @Test
+    public void accountTest(){
+        Client igor = new Client();
+        igor.setAccountNumber(1997);
+        igor.setPassword(777);
+        igor.setBalence(0.1);
+
+        igor.getAccountNumber();
+        igor.getPassword();
+        igor.getBalence();
+    }
+
     @Test // TODO Task 4003
     public void checkAgeTest() throws Exception {
         Client cl1 = new Client("Nazar", "Mykhailiv",

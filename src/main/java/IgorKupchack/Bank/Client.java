@@ -5,6 +5,7 @@ import java.io.*;
 
 public class Client extends Human {
     private String phoneNumber;
+    private Account account = new Account();
 
     public Client() {
         super();
@@ -51,6 +52,31 @@ public class Client extends Human {
         } else {
             return operators[i];
         }
+    }
+
+    public void setAccountNumber(int accountNumber) {
+        account.setAccountNumber(accountNumber);
+    }
+
+    public void setBalence(double balence) {
+        account.setBalence(balence);
+    }
+
+    public void setPassword(int password) {
+        account.setPassword(password);
+    }
+
+    public void getAccountNumber(){
+
+        System.out.printf("Nuber of account "+account.getAccountNumber());
+    }
+
+    public void getBalence(){
+        System.out.printf("Balence "+account.getBalence());
+    }
+
+    public void getPassword(){
+        System.out.printf("Password "+account.getPassword());
     }
 }
 
