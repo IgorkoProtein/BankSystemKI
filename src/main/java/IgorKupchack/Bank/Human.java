@@ -91,4 +91,14 @@ public class Human {
         System.out.println(name + " " + surname + ", he was born at " + date + "." + mounth + "." + year);
     }
 
+    @Override
+    public String toString() {
+        return "Human{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", date=" + date +
+                ", mounth=" + mounth +
+                ", year=" + year +
+                '}';
+    }
 }

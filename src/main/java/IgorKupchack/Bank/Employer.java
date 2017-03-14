@@ -31,4 +31,12 @@ public class Employer extends Human {
     public void setId(int id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "Employer{" +
+                super.toString() +                "salery=" + salery +
+                ", id=" + id +
+                '}';
+    }
 }
