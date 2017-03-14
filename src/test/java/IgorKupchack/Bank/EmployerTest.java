@@ -10,8 +10,7 @@ public class EmployerTest {
         Employer vova = new Employer();
         double testSalery = 2024.3;
         vova.setSalery(testSalery);
-       // assertEquals(testSalery, vova.getSalery());
-       assertNotEquals(testSalery, vova.getSalery());
+        assertEquals(testSalery, vova.getSalery(), 0);
     }
 
     @Test

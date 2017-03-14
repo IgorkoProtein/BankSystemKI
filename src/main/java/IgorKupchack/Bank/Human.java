@@ -1,5 +1,6 @@
 package IgorKupchack.Bank;
 
+import java.util.GregorianCalendar;
 import java.util.Scanner;
 
 public class Human {
@@ -8,11 +9,13 @@ public class Human {
     private int date;
     private int mounth;
     private int year;
+    private GregorianCalendar born_date;
 
     public Human() {
         name = "-1";
         surname = "-1";
         date = mounth = year = -1;
+        born_date = new GregorianCalendar();
     }
 
     /**
@@ -29,6 +32,8 @@ public class Human {
         this.date = date;
         this.mounth = mounth;
         this.year = year;
+
+        born_date = new GregorianCalendar(year,mounth,date);
     }
 
     /**
