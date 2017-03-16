@@ -10,8 +10,8 @@ public class Employer extends Human {
         this.id = -1;
     }
 
-    public Employer(String name, String surname, int date, int mounth, int year, double salery, int id) {
-        super(name, surname, date, mounth, year);
+    public Employer(String name, String surname, double salery, int id) {
+        super(name, surname);
         this.salery = salery;
         this.id = id;
     }

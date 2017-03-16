@@ -11,7 +11,7 @@ public class Cashier extends Employer{
     }
 
     public Cashier(String name, String surname, int date, int mounth, int year, double salery, int id, int speed) {
-        super(name, surname, date, mounth, year, salery, id);
+        super(name, surname, salery, id);
         this.speed = speed;
         Account account = new Account();
     }

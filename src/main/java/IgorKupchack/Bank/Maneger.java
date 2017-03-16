@@ -12,7 +12,7 @@ public class Maneger extends Employer {
     }
 
     public Maneger(String name, String surname, int date, int mounth, int year, double salery, int id, int experience) {
-        super(name, surname, date, mounth, year, salery, id);
+        super(name, surname, salery, id);
         this.experience = experience;
         Account account = new Account();
     }

@@ -14,13 +14,9 @@ public class EmployerTest {
     }
 
     @Test
-    public void getId() throws Exception {
-
-    }
-
-    @Test
-    public void setId() throws Exception {
-
+    public void toStringTest() throws Exception {
+        Employer ivan = new Employer();
+        System.out.printf(ivan.toString());
     }
 
 }

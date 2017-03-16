@@ -14,7 +14,7 @@ public class lesson6_1 {
         ArrayList<Employer> staff = new ArrayList<Employer>();
         staff.add(new Employer());
         staff.add(new Employer());
-        staff.add(new Employer("Nazar", "Mykhailiv", 30,7,1990,2000,1));
+        staff.add(new Employer("Nazar", "Mykhailiv",2000,1));
         staff.add(new Employer());
 
         System.out.println("Size of arrayList " + staff.size());

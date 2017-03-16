@@ -6,34 +6,22 @@ import java.util.Scanner;
 public class Human {
     private String name;
     private String surname;
-    private int date;
-    private int mounth;
-    private int year;
     private GregorianCalendar born_date;
 
     public Human() {
         name = "-1";
         surname = "-1";
-        date = mounth = year = -1;
         born_date = new GregorianCalendar();
     }
 
     /**
-     *
-     * @param name - імя
+     * @param name    - імя
      * @param surname - прізвище
-     * @param date
-     * @param mounth
-     * @param year
      */
-    public Human(String name, String surname, int date, int mounth, int year) {
+    public Human(String name, String surname) {
         this.name = name;
         this.surname = surname;
-        this.date = date;
-        this.mounth = mounth;
-        this.year = year;
-
-        born_date = new GregorianCalendar(year,mounth,date);
+        born_date = new GregorianCalendar();
     }
 
     /**
@@ -48,7 +36,6 @@ public class Human {
     }
 
     /**
-     *
      * @param name - даний параметр може бути переданий в метод як String
      */
     public void setName(String name) {
@@ -64,36 +51,17 @@ public class Human {
         surname = c;
     }
 
-    public void setDate() {
-        int d;
-        System.out.println("Enter his date of birth(day)");
-        Scanner b = new Scanner(System.in);
-        d = b.nextInt();
-        date = d;
-    }
-
-    public void setMounth() {
-        int e;
-        System.out.println("Enter his date of birth(mount)");
-        Scanner b = new Scanner(System.in);
-        e = b.nextInt();
-        mounth = e;
-    }
-
-    public void setYear() {
-        int d;
-        System.out.println("Enter his date of birth(year)");
-        Scanner b = new Scanner(System.in);
-        d = b.nextInt();
-        year = d;
-    }
 
     public String getName() {
         return name;
     }
 
-    public void show() {
-        System.out.println(name + " " + surname + ", he was born at " + date + "." + mounth + "." + year);
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setBorn_date(GregorianCalendar born_date) {
+        this.born_date = born_date;
     }
 
     @Override
@@ -101,9 +69,9 @@ public class Human {
         return "Human{" +
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", date=" + date +
-                ", mounth=" + mounth +
-                ", year=" + year +
+                ", born_date=" + born_date.get(born_date.YEAR) +  " " + born_date.get(born_date.MONTH) + " " + born_date.get(born_date.DATE) +
                 '}';
     }
 }
+
+

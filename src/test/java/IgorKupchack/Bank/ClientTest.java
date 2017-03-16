@@ -39,10 +39,10 @@ public class ClientTest {
         Client igor = new Client();
         Account ac = new Account("4444555566667777", 5000, 5555);
         igor.setAccount(ac);
-
         Object obj = new Object();
 
         System.out.println(ac.toString());
+        System.out.println(igor.toString());
 
 
     }
@@ -50,10 +50,9 @@ public class ClientTest {
     @Test // TODO Task 4003
     public void checkAgeTest() throws Exception {
         Client cl1 = new Client("Nazar", "Mykhailiv",
-                30, 07, 1990,
+
                 "0971073443");
         Client cl2 = new Client("Igor", "Kupchack",
-                1, 01, 2001,
                 "0501073443");
 
         //assertEquals("It's possible to open account for this client", cl1.checkAge());

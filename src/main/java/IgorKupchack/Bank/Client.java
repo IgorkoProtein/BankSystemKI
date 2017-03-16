@@ -11,8 +11,8 @@ public class Client extends Human {
         account = new Account();
     }
 
-    public Client(String name, String surname, int date, int mounth, int year, String phoneNumber) {
-        super(name, surname, date, mounth, year);
+    public Client(String name, String surname, String phoneNumber) {
+        super(name, surname);
         this.phoneNumber = phoneNumber;
         account = new Account();
     }
@@ -60,6 +60,14 @@ public class Client extends Human {
 
     public void setAccount(Account account) {
         this.account = account;
+    }
+
+    @Override
+    public String toString() {
+        return "Client{  " + super.toString() +
+                "phoneNumber='" + phoneNumber + '\'' +
+                ", account=" + account +
+                '}';
     }
 }
 

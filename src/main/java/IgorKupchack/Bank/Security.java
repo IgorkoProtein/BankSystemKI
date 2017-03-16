@@ -12,7 +12,7 @@ public class Security extends Employer{
     }
 
     public Security(String name, String surname, int date, int mounth, int year, double salery, int id, double height) {
-        super(name, surname, date, mounth, year, salery, id);
+        super(name, surname, salery, id);
         this.height = height;
         Account account = new Account();
     }
