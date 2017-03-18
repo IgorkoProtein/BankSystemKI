@@ -60,6 +60,11 @@ public class Human {
         return surname;
     }
 
+    public GregorianCalendar getBorn_date() {
+        return born_date;
+    }
+
+
     public void setBorn_date(GregorianCalendar born_date) {
         this.born_date = born_date;
     }

@@ -54,6 +54,10 @@ public class Client extends Human {
         }
     }
 
+    public void getAge(){
+        Client Stas = new Client("Stas", "Stratan", "0975565147");
+    }
+
     public Account getAccount() {
         return account;
     }

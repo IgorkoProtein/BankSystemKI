@@ -1,5 +1,9 @@
 package IgorKupchack.Bank;
 
+import sun.util.calendar.Gregorian;
+
+import java.util.GregorianCalendar;
+
 public class Employer extends Human {
     private double salery;
     private int id;
@@ -30,6 +34,15 @@ public class Employer extends Human {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public void getAge(GregorianCalendar bornDate){
+        GregorianCalendar today = new GregorianCalendar();
+        GregorianCalendar born = bornDate;
+
+        int age = today.get(today.YEAR)- born.get(born.YEAR);
+
+        System.out.printf("age of employee is " + age);
     }
 
     @Override
