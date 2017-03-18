@@ -11,8 +11,8 @@ public class Client extends Human {
         account = new Account();
     }
 
-    public Client(String name, String surname, String phoneNumber) {
-        super(name, surname);
+    public Client(String name, String surname, String phoneNumber, int year, int month, int date) {
+        super(name, surname, year, month, date);
         this.phoneNumber = phoneNumber;
         account = new Account();
     }
@@ -52,10 +52,6 @@ public class Client extends Human {
         } else {
             return operators[i];
         }
-    }
-
-    public void getAge(){
-        Client Stas = new Client("Stas", "Stratan", "0975565147");
     }
 
     public Account getAccount() {

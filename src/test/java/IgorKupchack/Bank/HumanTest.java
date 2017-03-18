@@ -22,11 +22,11 @@ public class HumanTest {
     }
 
 
-    @Test
+    /*@Test
     public void callendarTest() throws Exception {
         Human igorko = new Human("Igor", "Kupchack");
         GregorianCalendar date = new GregorianCalendar(1997, 04, 25);
         igorko.setBorn_date(date);
         System.out.printf(igorko.toString());
-    }
+    }*/
 }

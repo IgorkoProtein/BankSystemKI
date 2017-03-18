@@ -18,15 +18,12 @@ public class Human {
      * @param name    - імя
      * @param surname - прізвище
      */
-    public Human(String name, String surname) {
+    public Human(String name, String surname, int year, int month, int date) {
         this.name = name;
         this.surname = surname;
-        born_date = new GregorianCalendar();
+        born_date = new GregorianCalendar(year, month, date);
     }
 
-    /**
-     *
-     */
     public void setName() {
         String a;
         System.out.println("Enter his name");
@@ -51,7 +48,6 @@ public class Human {
         surname = c;
     }
 
-
     public String getName() {
         return name;
     }
@@ -64,9 +60,16 @@ public class Human {
         return born_date;
     }
 
-
     public void setBorn_date(GregorianCalendar born_date) {
         this.born_date = born_date;
+    }
+
+    public int getAge() {
+        GregorianCalendar today = new GregorianCalendar();
+        int diffYears = today.get(today.YEAR) - born_date.get(born_date.YEAR);
+        int diffMonth = diffYears*12 + today.get(today.MONTH) - born_date.get(born_date.MONTH);
+
+        return diffMonth/12;
     }
 
     @Override
@@ -74,7 +77,9 @@ public class Human {
         return "Human{" +
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", born_date=" + born_date.get(born_date.YEAR) +  " " + born_date.get(born_date.MONTH) + " " + born_date.get(born_date.DATE) +
+                ", born_date=" + born_date.get(born_date.YEAR) +
+                " " + born_date.get(born_date.MONTH) +
+                " " + born_date.get(born_date.DATE) +
                 '}';
     }
 }

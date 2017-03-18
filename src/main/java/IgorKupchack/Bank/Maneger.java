@@ -11,8 +11,8 @@ public class Maneger extends Employer {
         Account account = new Account();
     }
 
-    public Maneger(String name, String surname, int date, int mounth, int year, double salery, int id, int experience) {
-        super(name, surname, salery, id);
+    public Maneger(String name, String surname, double salery, int id, int experience, int year, int month, int date) {
+        super(name, surname, salery, id, year, month, date);
         this.experience = experience;
         Account account = new Account();
     }
