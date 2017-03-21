@@ -8,6 +8,11 @@ import java.util.GregorianCalendar;
 import static org.junit.Assert.*;
 
 public class EmployerTest {
+    @Test
+    public void getExperience() throws Exception {
+        Employer vovka = new Employer();
+        vovka.getExperience(2015, 4, 21);
+    }
 
 
     @Test
