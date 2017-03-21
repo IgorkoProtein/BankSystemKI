@@ -8,25 +8,21 @@ public class Employer extends Human {
     private static int nextID = 1;
     private double salery;
     private int id;
-    private GregorianCalendar employment;
+    private GregorianCalendar employment = null;
 
     public Employer() {
         super();
         this.salery = -1;
         setId();
-        //employment = new GregorianCalendar();
+        employment = new GregorianCalendar();
     }
 
     public Employer(String name, String surname, double salery, int id, int year, int month, int date) {
         super(name, surname, year, month, date);
         this.salery = salery;
         this.id = id;
+        employment = new GregorianCalendar();
     }
-    /*
-    public Employer(int year, int mount, int day){
-        employment = new GregorianCalendar(year, mount, day);
-    }
-    */
 
     public double getSalery() {
         return salery;
@@ -65,9 +61,8 @@ public class Employer extends Human {
         this.employment = employment;
     }
 
-    public GregorianCalendar getExperience(int year, int mount, int day){
+    public int getExperience(){
         GregorianCalendar today = new GregorianCalendar();
-        employment = new GregorianCalendar(year, mount, day);
 
        int diffYear = (today.get(today.YEAR) - employment.get(employment.YEAR))*365;
        int diffMount = (today.get(today.MONTH) - employment.get(employment.MONTH))*12;
@@ -78,7 +73,7 @@ public class Employer extends Human {
        int resultDays = ((diffDays%360)%12);
 
        GregorianCalendar result = new GregorianCalendar(resultYear, resultMount, resultDays);
-       return result;
+       return 0;
     }
 
     @Override
