@@ -4,12 +4,17 @@ package IgorKupchack.Bank;
 public class Client extends Human {
     private String phoneNumber;
     private Account account;
+    private static int ID = 10;
+    private int clientID;
 
     public Client() {
         super();
         phoneNumber = "-1";
         account = new Account();
+        setID();
     }
+
+
 
     public Client(String name, String surname, String phoneNumber, int year, int month, int date) {
         super(name, surname, year, month, date);
@@ -60,6 +65,19 @@ public class Client extends Human {
 
     public void setAccount(Account account) {
         this.account = account;
+    }
+
+    public int getClientID() {
+        return clientID;
+    }
+
+    public void setClientID(int clientID) {
+        this.clientID = clientID;
+    }
+
+    public void setID(){
+        clientID = ID;
+        ID++;
     }
 
     @Override
