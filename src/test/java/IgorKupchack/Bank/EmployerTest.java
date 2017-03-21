@@ -11,7 +11,7 @@ public class EmployerTest {
     @Test
     public void getExperience() throws Exception {
         Employer vovka = new Employer();
-        vovka.getExperience(2015, 4, 21);
+        //vovka.getExperience(2015, 4, 21);
     }
 
 
@@ -49,6 +49,26 @@ public class EmployerTest {
         }
 
         System.out.println(Employer.getNextID());
+
+    }
+
+    @Test
+    public void polimorfizmTest() throws Exception {
+        ArrayList<Employer> staff = new ArrayList<Employer>();
+        staff.add(new Employer());
+        staff.add(new Maneger());
+        staff.add(new Maneger());
+        staff.add(new Employer());
+
+        for (Employer human : staff) {
+            human.raiseSalary();
+            System.out.println(human.toString());
+        }
+
+        Employer em = new Employer();
+        Employer em2 = new Maneger();
+
+
 
     }
 }

@@ -34,6 +34,10 @@ public class Maneger extends Employer {
         this.account = account;
     }
 
+    @Override
+    public void raiseSalary() {
+        setSalery(getSalery()+getSalery()*0.20);
+    }
 
     @Override
     public String toString() {

@@ -12,7 +12,7 @@ public class Employer extends Human {
 
     public Employer() {
         super();
-        this.salery = -1;
+        this.salery = 3000;
         setId();
         employment = new GregorianCalendar();
     }
@@ -51,6 +51,10 @@ public class Employer extends Human {
 
     public void raiseSalary(int raiseTo) {
         salery = salery + raiseTo;
+    }
+
+    public void raiseSalary() {
+        salery += salery*0.10;
     }
 
     public GregorianCalendar getEmployment() {
