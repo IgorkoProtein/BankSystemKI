@@ -74,6 +74,10 @@ public class Employer extends Human {
        return diffMount / 12;
     }
 
+    public void groupId(){
+        id += 2000;
+    }
+
     @Override
     public String toString() {
         return "Employer{" +

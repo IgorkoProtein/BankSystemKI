@@ -73,7 +73,20 @@ public class EmployerTest {
         Employer em = new Employer();
         Employer em2 = new Maneger();
 
+    }
 
+    @Test
+    public void groupIdTest(){
+        ArrayList<Employer> temp = new ArrayList<Employer>();
+        temp.add(new Employer());
+        temp.add(new Employer());
+        temp.add(new Maneger());
+        temp.add(new Employer());
+
+        for (Employer i : temp) {
+            i.groupId();
+            System.out.println(i.toString());
+        }
 
     }
 }

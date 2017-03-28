@@ -40,6 +40,9 @@ public class Maneger extends Employer {
     }
 
     @Override
+    public void groupId(){  setId(getId()+3000 );}
+
+    @Override
     public String toString() {
         return "Maneger{" +
                 super.toString() +
