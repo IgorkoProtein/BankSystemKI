@@ -11,7 +11,12 @@ public class EmployerTest {
     @Test
     public void getExperience() throws Exception {
         Employer vovka = new Employer();
-        //vovka.getExperience(2015, 4, 21);
+
+        GregorianCalendar date = new GregorianCalendar(2015, 4, 23);
+        vovka.setEmployment(date);
+
+        assertEquals(1, vovka.getExperience(), 0);
+        //System.out.println(vovka.getExperience());
     }
 
 

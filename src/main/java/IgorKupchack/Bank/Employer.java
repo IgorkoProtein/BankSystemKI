@@ -68,16 +68,10 @@ public class Employer extends Human {
     public int getExperience(){
         GregorianCalendar today = new GregorianCalendar();
 
-       int diffYear = (today.get(today.YEAR) - employment.get(employment.YEAR))*365;
-       int diffMount = (today.get(today.MONTH) - employment.get(employment.MONTH))*12;
-       int diffDays = (today.get(today.MONTH) - employment.get(employment.MONTH)) + diffMount +diffYear;
+       int diffYear = (today.get(today.YEAR) - employment.get(employment.YEAR));
+       int diffMount = diffYear*12 + (today.get(today.MONTH) - employment.get(employment.MONTH));
 
-       int resultYear = diffDays/360;
-       int resultMount = (diffDays%360)/12;
-       int resultDays = ((diffDays%360)%12);
-
-       GregorianCalendar result = new GregorianCalendar(resultYear, resultMount, resultDays);
-       return 0;
+       return diffMount / 12;
     }
 
     @Override
