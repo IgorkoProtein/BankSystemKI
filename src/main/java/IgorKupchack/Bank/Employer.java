@@ -1,11 +1,10 @@
 package IgorKupchack.Bank;
 
-import sun.util.calendar.Gregorian;
-
 import java.util.GregorianCalendar;
 
 public class Employer extends Human {
-    private static int nextID = 1;
+    private static int nextIDem = 1;
+
     private double salery;
     private int id;
     private GregorianCalendar employment = null;
@@ -41,12 +40,13 @@ public class Employer extends Human {
     }
 
     public void setId() {
-        id = nextID;
-        nextID++;
+        id = nextIDem;
+        groupId();
+        nextIDem++;
     }
 
-    public static int getNextID() {
-        return nextID;
+    public static int getNextIDem() {
+        return nextIDem;
     }
 
     public void raiseSalary(int raiseTo) {
@@ -54,7 +54,7 @@ public class Employer extends Human {
     }
 
     public void raiseSalary() {
-        salery += salery*0.10;
+        salery += salery * 0.10;
     }
 
     public GregorianCalendar getEmployment() {
@@ -65,16 +65,16 @@ public class Employer extends Human {
         this.employment = employment;
     }
 
-    public int getExperience(){
+    public int getExperience() {
         GregorianCalendar today = new GregorianCalendar();
 
-       int diffYear = (today.get(today.YEAR) - employment.get(employment.YEAR));
-       int diffMount = diffYear*12 + (today.get(today.MONTH) - employment.get(employment.MONTH));
+        int diffYear = (today.get(today.YEAR) - employment.get(employment.YEAR));
+        int diffMount = diffYear * 12 + (today.get(today.MONTH) - employment.get(employment.MONTH));
 
-       return diffMount / 12;
+        return diffMount / 12;
     }
 
-    public void groupId(){
+    public void groupId() {
         id += 2000;
     }
 

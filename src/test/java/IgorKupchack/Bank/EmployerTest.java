@@ -3,6 +3,7 @@ package IgorKupchack.Bank;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 import static org.junit.Assert.*;
@@ -12,11 +13,16 @@ public class EmployerTest {
     public void getExperience() throws Exception {
         Employer vovka = new Employer();
 
-        GregorianCalendar date = new GregorianCalendar(2015, 4, 23);
-        vovka.setEmployment(date);
+        GregorianCalendar dateOfStart = new GregorianCalendar(2015, 4, 23);
+        GregorianCalendar curentDate = new GregorianCalendar();
 
-        assertEquals(1, vovka.getExperience(), 0);
-        //System.out.println(vovka.getExperience());
+        int diffYear = (curentDate.get(Calendar.YEAR) - dateOfStart.get(Calendar.YEAR));
+        int diffMount = diffYear * 12 + (curentDate.get(Calendar.MONTH) - dateOfStart.get(Calendar.MONTH));
+        int expiriance = diffMount/12;
+
+        vovka.setEmployment(dateOfStart);
+
+        assertEquals(expiriance, vovka.getExperience(), 0);
     }
 
 
@@ -53,7 +59,7 @@ public class EmployerTest {
             System.out.println(human.toString());
         }
 
-        System.out.println(Employer.getNextID());
+        System.out.println(Employer.getNextIDem());
 
     }
 
@@ -84,9 +90,11 @@ public class EmployerTest {
         temp.add(new Employer());
 
         for (Employer i : temp) {
-            i.groupId();
             System.out.println(i.toString());
         }
+
+        assertEquals(2002, temp.get(1).getId());
+        assertEquals(3003, temp.get(2).getId());
 
     }
 }
