@@ -27,7 +27,7 @@ public class Menu {
         int temp = -1;
         do {
             System.out.print("Enter menu number: ");
-            temp = imput.next();
+            //temp = imput.next();
         }while(temp<0 || temp>3);
 
         return temp;
