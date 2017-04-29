@@ -31,26 +31,23 @@ public class ProductCatalog {
         return products.get(inputIndex);
     }
 
-    public static void addProduct(){
+    public static void addProduct() {
         int condition = 1;
         String productName;
         double productPrice;
+
         do {
-            showProducts();
+            Scanner input = new Scanner(System.in);
 
-            Scanner cout = new Scanner(System.in);
-            System.out.println("Do you want to create new object? Yes - enter 1, No - enter 0");
-            condition = cout.nextInt();
-
-            Scanner name = new Scanner(System.in);
             System.out.println("Please, enter name of product: ");
-            productName = name.nextLine();
+            productName = input.nextLine();
 
-            Scanner price = new Scanner(System.in);
             System.out.println("Please, enter price of product: ");
-            productPrice = price.nextDouble();
+            productPrice = input.nextDouble();
 
             addProduct(productName, productPrice);
-        }while (condition == 1);
+            System.out.println("Do you want to create new object? Yes - enter 1, No - enter 0");
+            condition = input.nextInt();
+        } while (condition == 1);
     }
 }

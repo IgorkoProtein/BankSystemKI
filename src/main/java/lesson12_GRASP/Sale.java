@@ -2,6 +2,7 @@ package lesson12_GRASP;
 
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
+import java.util.Scanner;
 
 public class Sale {
     private ArrayList<SalesLineItem> items;
@@ -34,6 +35,30 @@ public class Sale {
             temp += items.get(i).getSubPrice();
         }
         return temp;
+    }
+
+    public void setItems() {
+        Scanner input = new Scanner(System.in);
+        int condition;
+
+        do {
+            Product temp = ProductCatalog.chooseProduct();
+            System.out.println("How much product do you want? ");
+            System.out.print("quantity: ");
+            int quantity = input.nextInt();
+            setItems(temp, quantity);
+
+            System.out.println("Do you want to add new item to sale? Yre - 1, no 0");
+            do {
+                condition = input.nextInt();
+                if (condition == 0 || condition == 1) {
+                    break;
+                } else {
+                    System.out.println("Error input!!! TRY AGAIN");
+                }
+            } while (true);
+
+        } while (condition == 1);
     }
 
     @Override
