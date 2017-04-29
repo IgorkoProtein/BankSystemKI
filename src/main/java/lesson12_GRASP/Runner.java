@@ -10,6 +10,7 @@ public class Runner {
 
         ProductCatalog.showProducts();
 
+        ProductCatalog.addProduct();
 
         //SalesLineItem slm1 = new SalesLineItem();
         //Sale sl = new Sale();

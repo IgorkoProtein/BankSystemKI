@@ -28,9 +28,29 @@ public class ProductCatalog {
                 break;
             }
         }
-
         return products.get(inputIndex);
+    }
 
+    public static void addProduct(){
+        int condition = 1;
+        String productName;
+        double productPrice;
+        do {
+            showProducts();
 
+            Scanner cout = new Scanner(System.in);
+            System.out.println("Do you want to create new object? Yes - enter 1, No - enter 0");
+            condition = cout.nextInt();
+
+            Scanner name = new Scanner(System.in);
+            System.out.println("Please, enter name of product: ");
+            productName = name.nextLine();
+
+            Scanner price = new Scanner(System.in);
+            System.out.println("Please, enter price of product: ");
+            productPrice = price.nextDouble();
+
+            addProduct(productName, productPrice);
+        }while (condition == 1);
     }
 }
