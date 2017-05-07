@@ -1,6 +1,8 @@
 package lesson12_GRASP;
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable{
 
     private  String description;
     private double price;
@@ -56,8 +58,6 @@ public class Product {
 
     @Override
     public String toString() {
-        return "ID = " + itemID +
-                " description = " + description + ' ' +
-                " price = " + price;
+        return  itemID +"\t\t" + description + "\t\t" + price;
     }
 }

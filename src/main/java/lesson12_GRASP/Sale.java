@@ -14,7 +14,10 @@ public class Sale {
     }
 
     public void setItems(Product product, int quantity) {
-        items.add(new SalesLineItem(product, quantity));
+        SalesLineItem salesLineItem = SalesLineItem.create();
+        salesLineItem.setProduct(product);
+        salesLineItem.setQuantity(quantity);
+        items.add(salesLineItem);
     }
 
     public void setDate(GregorianCalendar date) {
@@ -59,6 +62,10 @@ public class Sale {
             } while (true);
 
         } while (condition == 1);
+    }
+
+    public static Sale create() {
+        return new Sale();
     }
 
     @Override

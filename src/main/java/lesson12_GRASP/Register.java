@@ -9,5 +9,8 @@ public class Register {
     public static void addSale(Sale sale){
         sales.add(sale);
     }
+    public static void addSale(){
+        Sale sl = Sale.create();
+    }
 
 }

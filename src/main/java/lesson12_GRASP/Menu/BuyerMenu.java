@@ -1,11 +1,11 @@
-package lesson12_GRASP;
+package lesson12_GRASP.Menu;
 
 import java.util.Scanner;
 
 public class BuyerMenu {
     private static int choose = -1;
 
-    public static void main() {
+    public static void run() {
         do {
             showMenu();
             choose = getMenuNumber();
@@ -14,9 +14,10 @@ public class BuyerMenu {
     }
 
     public static void showMenu(){
-        System.out.printf("choose Product");
-        System.out.printf("buyer's menu");
-        System.out.printf("Exit enter 0");
+        System.out.println("\n\n");
+        System.out.println("1 - choose Product");
+        System.out.println("2 - buyer's menu");
+        System.out.println("0 - Exit enter");
     }
 
     public static int getMenuNumber(){
@@ -24,7 +25,7 @@ public class BuyerMenu {
         int temp = -1;
 
         do {
-            System.out.println("Enter menu's number");
+            System.out.print("Enter menu's number : ");
 
             temp = input.nextInt();
         }while (temp<0 || temp>3);
@@ -34,7 +35,7 @@ public class BuyerMenu {
 
     public static void doAction(int a){
         switch (a) {
-            case 1: SellerMenu.main();
+            case 1: SellerMenu.run();
                 //case 2: buterMenu();
             case 0: System.exit(0);
         }

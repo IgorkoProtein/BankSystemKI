@@ -34,6 +34,10 @@ public class SalesLineItem {
         return quantity * product.getPrice();
     }
 
+    public static SalesLineItem create() {
+        return new SalesLineItem();
+    }
+
     @Override
     public String toString() {
         return "SalesLineItem{" +
