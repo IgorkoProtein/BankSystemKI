@@ -4,11 +4,14 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ProductCatalog {
-    private static ArrayList<Product> products = new ArrayList<Product>();
+    private static ArrayList<Product> products = Product.createArrayList();
     private static String pathToFile = "src/main/java/lesson12_GRASP/Data/productCatalog";
 
     public static void addProduct(String name, double price) {
-        products.add(new Product(name, price));
+        Product product = Product.create();
+        product.setDescription(name);
+        product.setPrice(price);
+        products.add(product);
     }
 
     public static void showProducts() {
@@ -57,7 +60,8 @@ public class ProductCatalog {
 
         Serializator.saveData(pathToFile, products);
     }
-    public static void loadProduct(){
+
+    public static void loadProduct() {
         products = (ArrayList<Product>) Serializator.loadData(pathToFile);
     }
 

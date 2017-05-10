@@ -1,13 +1,15 @@
 package lesson12_GRASP;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
-public class Product implements Serializable{
+public class Product implements Serializable {
 
-    private  String description;
+    private String description;
     private double price;
     private int itemID;
     private static int nextID = 1;
+    private static final long serialVersionUID = 1L;
 
     public Product() {
         this.description = " ";
@@ -51,13 +53,21 @@ public class Product implements Serializable{
         this.itemID = itemID;
     }
 
-    public void setItemID(){
+    public void setItemID() {
         this.itemID = nextID;
         nextID++;
     }
 
+    public static Product create() {
+        return new Product();
+    }
+
+    public static ArrayList<Product> createArrayList() {
+        return new ArrayList<Product>();
+    }
+
     @Override
     public String toString() {
-        return  itemID +"\t\t" + description + "\t\t" + price;
+        return itemID + "\t\t" + description + "\t\t" + price;
     }
 }

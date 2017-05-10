@@ -1,12 +1,14 @@
 package lesson12_GRASP;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.Scanner;
 
-public class Sale {
+public class Sale implements Serializable{
     private ArrayList<SalesLineItem> items;
     private GregorianCalendar date;
+    private static final long serialVersionUID = 2L;
 
     public Sale() {
         items = new ArrayList<SalesLineItem>();
@@ -69,6 +71,10 @@ public class Sale {
 
     public static Sale create() {
         return new Sale();
+    }
+
+    public static ArrayList<Sale> createArrayList(){
+        return new ArrayList<Sale>();
     }
 
     @Override

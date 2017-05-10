@@ -1,5 +1,7 @@
 package lesson12_GRASP.Menu;
 
+import lesson12_GRASP.Register;
+
 import java.util.Scanner;
 
 public class BuyerMenu {
@@ -15,9 +17,8 @@ public class BuyerMenu {
 
     public static void showMenu(){
         System.out.println("\n\n");
-        System.out.println("1 - choose Product");
-        System.out.println("2 - buyer's menu");
-        System.out.println("0 - Exit enter");
+        System.out.println("1 - Buy Products");
+        System.out.println("0 - Return back");
     }
 
     public static int getMenuNumber(){
@@ -28,15 +29,15 @@ public class BuyerMenu {
             System.out.print("Enter menu's number : ");
 
             temp = input.nextInt();
-        }while (temp<0 || temp>3);
+        }while (temp<0 || temp>1);
 
         return temp;
     }
 
     public static void doAction(int a){
         switch (a) {
-            case 1: SellerMenu.run();
-                //case 2: buterMenu();
+            case 1:
+                Register.addSale();break;
             case 0: System.exit(0);
         }
     }

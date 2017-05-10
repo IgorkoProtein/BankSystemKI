@@ -1,6 +1,7 @@
 package lesson12_GRASP.Menu;
 
 import lesson12_GRASP.ProductCatalog;
+import lesson12_GRASP.Register;
 import lesson12_GRASP.Serializator;
 
 import java.util.Scanner;
@@ -10,7 +11,8 @@ public class Menu {
 
     public static void main(String[] args) {
         do {
-            //ProductCatalog.loadProduct();
+            ProductCatalog.loadProduct();
+            Register.loadSales();
             showMenu();
             choose = getMenuNumber();
             doAction(choose);

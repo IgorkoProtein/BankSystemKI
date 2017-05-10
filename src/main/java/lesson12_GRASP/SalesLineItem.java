@@ -1,13 +1,15 @@
 package lesson12_GRASP;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
-public class SalesLineItem {
+public class SalesLineItem implements Serializable{
     private Product product = null;
     private int quantity;
+    private static final long serialVersionUID = 3L;
 
     public SalesLineItem() {
-        product = new Product();
+        product = Product.create();
         quantity = 0;
     }
 
