@@ -11,6 +11,7 @@ public class Register {
     }
     public static void addSale(){
         Sale sl = Sale.create();
+        
         sl.setItems();
 
 
