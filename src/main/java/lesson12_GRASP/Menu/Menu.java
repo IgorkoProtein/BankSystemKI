@@ -10,7 +10,7 @@ public class Menu {
 
     public static void main(String[] args) {
         do {
-            ProductCatalog.loadProduct();
+            //ProductCatalog.loadProduct();
             showMenu();
             choose = getMenuNumber();
             doAction(choose);

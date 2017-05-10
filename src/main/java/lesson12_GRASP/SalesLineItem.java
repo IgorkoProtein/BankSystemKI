@@ -1,5 +1,7 @@
 package lesson12_GRASP;
 
+import java.util.Scanner;
+
 public class SalesLineItem {
     private Product product = null;
     private int quantity;
@@ -33,6 +35,8 @@ public class SalesLineItem {
     public double getSubPrice() {
         return quantity * product.getPrice();
     }
+
+
 
     public static SalesLineItem create() {
         return new SalesLineItem();

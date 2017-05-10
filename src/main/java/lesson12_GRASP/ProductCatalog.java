@@ -60,4 +60,5 @@ public class ProductCatalog {
     public static void loadProduct(){
         products = (ArrayList<Product>) Serializator.loadData(pathToFile);
     }
+
 }

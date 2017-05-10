@@ -20,6 +20,7 @@ public class Sale {
         items.add(salesLineItem);
     }
 
+
     public void setDate(GregorianCalendar date) {
         this.date = date;
     }
@@ -39,6 +40,8 @@ public class Sale {
         }
         return temp;
     }
+
+
 
     public void setItems() {
         Scanner input = new Scanner(System.in);
